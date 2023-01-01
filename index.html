@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>POPFLIX</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./movies.js"></script>
+    <script src="./script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500&family=Ubuntu+Condensed&family=Work+Sans:wght@400;500;800&family=Yantramanav:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+   
+   
+  
+  </head>
+
+  <body>
+    <header>
+      <div class="content">
+        <a href="index.html" id="pop">POPFLIX</a>
+            <nav >
+              <ul>
+                <li><a class="navclass" href="index.html">HOME</a></li>
+                <li><a class="navclass" href="#movieFaves">FAVES</a></li>
+                <li><a class="navclass" href="./about.html">ABOUT</a></li>
+              </ul>
+            </nav>
+      </div>
+    </header>
+
+<div class="main-content">
+
+
+<!--select movie genre-->
+  <div class="top-container">
+    <div id="mission">
+      <!--<div class="box">-->
+        <h2>WELCOME TO POPFLIX</h2>
+          <p>Let's find you your new favourite movies!<br>
+            <span>Select a genre to begin</span>
+          </p>
+          <form id="genreForm">
+            <label>Choose a genre:</label>
+            <select name="genres" id="genres" onchange="selectMovie()">
+              <option value="" >Select a genre</option>
+              <option value="Action" >Action</option>
+              <option value="Adventure">Adventure</option>
+              <option value="Comedy">Comedy</option>
+              <option value="Documentary">Documentary</option>
+              <option value="Fantasy">Fantasy</option>
+              <option value="Horror">Horror</option>
+              <option value="Romance">Romance</option>
+              <option value="Kids">Kids</option>
+              <option value="ScienceFiction">Science Fiction</option>
+            </select>
+          </form>
+            <button type="button" class="goButton" id="goButton" onclick="displayMovie()">Action!</button>
+      <!--</div>-->
+    </div>
+  </div>
+
+    <div id="movieInfo" hidden>
+        <div><h2 id="movieTitle"></h2></div>
+        <div><img src="" alt="" id="moviePoster"></div>
+        <div><p id="movieText"></p></div>
+        <div id="buttonsDiv"></div>
+        <div id="fdbtns" hidden>
+          <button class="goButton" id="faveBtn" onclick="saveMovie()">♥ Add to favourites</button>
+          <button class="goButton" id="nopeBtn" onclick="displayMovie()">Show me a new one!</button>
+        </div>
+    </div>
+    
+      <div id="fTParent" hidden>
+        <h1 id="fT">Your favourites</h1>
+      </div>
+            
+      <div id="movieFaves" hidden>
+        
+          <p id="heading"></p>
+      </div>
+
+    
+      
+   
+
+<footer>
+    <div class="content">
+      <span class="copyright">© 2022 Popcorn Group</span>
+      <span class="location">With Love From: Toronto, Ontario, Canada</span>
+    </div>
+  </footer>
+  </body>
+</html>
